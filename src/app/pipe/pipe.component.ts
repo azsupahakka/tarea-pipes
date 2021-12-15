@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
+import { Component } from '@angular/core';
 import { Cliente } from './cliente';
 
 @Component({
@@ -7,6 +6,7 @@ import { Cliente } from './cliente';
   templateUrl: './pipe.component.html',
   styleUrls: ['./pipe.component.css']
 })
+
 export class PipeComponent {
 
   ejemplo: string = "perro";
@@ -22,6 +22,8 @@ export class PipeComponent {
   decimal: number = 0.123456;
   amount: number = 205.15;
   fecha = new Date(1988, 3, 15);
+
+  vector = [1,2,3,4,5,6,7];
 
   promiseValue = new Promise((resolve, reject) => {
     setTimeout(() => {

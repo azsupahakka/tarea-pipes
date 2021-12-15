@@ -1,66 +1,90 @@
-<br>
+<br />
 <h2>Ejemplos de Pipes:</h2>
-<br>
-<div class = "item">
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Tipo</th>
-      <th>Sin Pipe</th>
-      <th>Con Pipe</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>uppercase</td>
-      <td>{{ejemplo}}</td>
-      <td>{{ejemplo | uppercase}}</td>
-    </tr>
-    <tr>
-      <td>lowercase</td>
-      <td>{{ejemplo2}}</td>
-      <td>{{ejemplo2 | lowercase}}</td>
-    </tr>
-    <tr>
-      <td>slice: 0:4</td>
-      <td>{{ejemplo3}}</td>
-      <td>{{ejemplo3 | slice: 0:4}}</td>
-    </tr>
-    <tr>
-      <td>slice: 1:3</td>
-      <td>{{ejemplo3}}</td>
-      <td>{{ejemplo3 | slice: 1:3}}</td>
-    </tr>
-    <tr>
-      <td>number: '1.0-3'</td>
-      <td>{{decimal}}</td>
-      <td>{{decimal | number: '1.0-3'}}</td>
-    </tr>
-    <tr>
-      <td>percent: '1.0-3'</td>
-      <td>{{decimal}}</td>
-      <td>{{decimal | percent: '1.0-2'}}</td>
-    </tr>
-    <tr>
-      <td>currency: 'EUR'</td>
-      <td>{{amount}}</td>
-      <td>{{ amount | currency:'EUR' }}</td>
-    </tr>
-    <tr>
-      <td>json</td>
-      <td>{{cliente}}</td>
-      <td>{{ cliente | json }}</td>
-    </tr>
-    <tr>
-      <td>async</td>
-      <td></td>
-      <td>{{ promiseValue| async }}</td>
-    </tr>
-    <tr>
-      <td>date</td>
-      <td>{{fecha}}</td>
-      <td>{{ fecha | date }}</td>
-    </tr>
-  </tbody>
-</table>
+<br />
+<div class="item">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Sin Pipe</th>
+        <th>Con Pipe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>uppercase</td>
+        <td>{{ ejemplo }}</td>
+        <td>{{ ejemplo | uppercase }}</td>
+      </tr>
+      <tr>
+        <td>lowercase</td>
+        <td>{{ ejemplo2 }}</td>
+        <td>{{ ejemplo2 | lowercase }}</td>
+      </tr>
+      <tr>
+        <td>slice: 0:4</td>
+        <td>{{ ejemplo3 }}</td>
+        <td>{{ ejemplo3 | slice: 0:4 }}</td>
+      </tr>
+      <tr>
+        <td>slice: 1:3</td>
+        <td>{{ ejemplo3 }}</td>
+        <td>{{ ejemplo3 | slice: 1:3 }}</td>
+      </tr>
+      <tr>
+        <td>number: '1.0-3'</td>
+        <td>{{ decimal }}</td>
+        <td>{{ decimal | number: "1.0-3" }}</td>
+      </tr>
+      <tr>
+        <td>percent: '1.0-3'</td>
+        <td>{{ decimal }}</td>
+        <td>{{ decimal | percent: "1.0-2" }}</td>
+      </tr>
+      <tr>
+        <td>currency: 'EUR'</td>
+        <td>{{ amount }}</td>
+        <td>{{ amount | currency: "EUR" }}</td>
+      </tr>
+      <tr>
+        <td>json</td>
+        <td>{{ cliente }}</td>
+        <td>{{ cliente | json }}</td>
+      </tr>
+      <tr>
+        <td>async</td>
+        <td></td>
+        <td>{{ promiseValue | async }}</td>
+      </tr>
+      <tr>
+        <td>date</td>
+        <td>{{ fecha }}</td>
+        <td>{{ fecha | date }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<br />
+<h2>Ejemplo de Pipe personalizado:</h2>
+<br />
+<div>
+  <h1>Números en castellano</h1>
+  <ul>
+    <li *ngFor="let valor of vector">
+      {{ valor | letras }}
+    </li>
+  </ul>
+  <h1>Números en inglés</h1>
+  <ul>
+    <li *ngFor="let valor of vector">
+      {{ valor | letras: "ingles" }}
+    </li>
+  </ul>
+  <h1>Números en portugués</h1>
+  <ul>
+    <li *ngFor="let valor of vector">
+      {{ valor | letras: "portugues" }}
+    </li>
+  </ul>
 </div>

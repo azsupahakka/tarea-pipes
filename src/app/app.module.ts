@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { LetrasPipe } from './pipe/letras.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PipeComponent
+    PipeComponent,
+    LetrasPipe
   ],
   imports: [
     BrowserModule
